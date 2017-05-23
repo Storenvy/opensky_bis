@@ -1,4 +1,5 @@
 require 'opensky_bis/configuration'
+require 'opensky_bis/signature'
 require 'opensky_bis/version'
 
 module OpenskyBis
