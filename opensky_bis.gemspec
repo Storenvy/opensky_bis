@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jacob Mack"]
   spec.email         = ["jacob.mack@opensky.com"]
 
-  spec.summary       = 'A Ruby gem for interacting with the OSP Merchant API. http://bisapidocs.opensky.com/'
+  spec.summary       = 'OSP Merchant API Gem'
   spec.description   = 'A Ruby gem for interacting with the OSP Merchant API. http://bisapidocs.opensky.com/'
   spec.homepage      = 'https://github.com/Storenvy/opensky_bis'
   spec.license       = 'MIT'
@@ -27,7 +27,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'activemodel', '~> 4.2'
+
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency "rspec", "~> 2.14"
+  spec.add_development_dependency 'shoulda-matchers', '~> 2.8'
+  spec.add_development_dependency 'pry', "~>0.10.1"
 end

@@ -1,6 +1,9 @@
 require 'opensky_bis/configuration'
+require 'opensky_bis/errors/configuration'
 require 'opensky_bis/signature'
 require 'opensky_bis/version'
+require 'opensky_bis/general_init'
+require 'opensky_bis/product'
 
 module OpenskyBis
   class << self
