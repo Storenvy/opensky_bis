@@ -4,6 +4,7 @@ require 'opensky_bis/signature'
 require 'opensky_bis/version'
 require 'opensky_bis/general_init'
 require 'opensky_bis/product'
+require 'opensky_bis/order'
 
 module OpenskyBis
   class << self
