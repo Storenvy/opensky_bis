@@ -16,7 +16,19 @@ module OpenskyBis
 
     attr_accessor :product_id, :sku, :name, :description, :price, :msrp, :quantity, :condition, :brand, :identifers, :dimensions, :attributes, :product_video_url, :images, :channels, :variations, :created_at, :updated_at, :deleted_at
 
-    validates_presence_of :sku, :name, :description, :price, :quantity, :images
+    validates_presence_of :sku, :name, :description, :price, :quantity
 
+    validate :validate_images
+
+    def initialize
+      @images = []
+    end
+
+    # All products must have at least one image, but not more than twelve.
+    def validate_images
+      errors.add(:images, 'at least one image is required') if @images.empty?
+
+      errors.add(:images, 'too many images') if @images.length > 12
+    end
   end
 end
