@@ -7,6 +7,7 @@ require 'opensky_bis/general_init'
 require 'opensky_bis/product'
 require 'opensky_bis/order'
 require 'opensky_bis/api'
+require 'opensky_bis/request'
 
 module OpenskyBis
   class << self
